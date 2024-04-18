@@ -14,8 +14,7 @@ export async function POST(request: NextRequest) {
     const { data: games, error } = await client
         .from('games')
         .select('id, name')
-        .eq('country', data["country"])
-        .limit(10);
+        .eq('country', data["country"]);
     if (error) {
         return new Response('error', { status: 500 });
     }
