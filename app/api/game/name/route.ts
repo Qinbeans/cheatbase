@@ -1,6 +1,8 @@
 import { createClient } from '@/utils/supabase/server';
 import { NextRequest } from 'next/server';
 
+export const runtime = 'edge'
+
 export async function POST(request: NextRequest) {
     const data: any = await request.json();
     if (!data["country"]) {

@@ -1,4 +1,4 @@
-import Fetch from '@/utils/components/database_form';
+import Fetch from './components/database_form';
 
 export default function Home() {
   return (

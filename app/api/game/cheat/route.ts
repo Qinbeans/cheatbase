@@ -1,6 +1,8 @@
 import { createClient } from '@/utils/supabase/server';
 import { NextRequest } from 'next/server';
 
+export const runtime = 'edge'
+
 export async function POST(request: NextRequest) {
     const data: any = await request.json();
     if (!data["game_id"]) {
@@ -12,8 +14,7 @@ export async function POST(request: NextRequest) {
     const { data: cheats, error } = await client
         .from('cheats')
         .select('id, name, code')
-        .eq('game', data["game_id"])
-        .limit(10);
+        .eq('game', data["game_id"]);
     if (error) {
         console.error('Failed to fetch cheats:', error.message);
         return new Response('error', { status: 500 });
