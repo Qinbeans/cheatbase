@@ -13,7 +13,7 @@ This is for Pokemon DS emulator cheats. It stores a comprehensive list of cheats
 
   <img src="./docs/game.png" alt="Game" width="400"/>
 
-4. Select the category of cheats you want (it will all categories, so you're not blindly searching)
+4. Select the category of cheats you want (it will list all categories, so you're not blindly searching)
 
   <img src="./docs/category.png" alt="Category" width="400"/>
 
