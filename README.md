@@ -21,3 +21,9 @@ This is for Pokemon DS emulator cheats. It stores a comprehensive list of cheats
     - There are a number of ways to obtain the cheat you're looking for, the best way is to use the cheat search bar.
 
   <img src="./docs/cheat.png" alt="Cheat" width="400"/>
+
+## Credits
+
+I didnt collect the cheats, I scraped and sanitized the Libretro database.
+
+[Libretro-Database](https://github.com/libretro/libretro-database)
