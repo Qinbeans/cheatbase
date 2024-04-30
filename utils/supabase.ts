@@ -11,6 +11,7 @@ export type Database = {
     Tables: {
       cheats: {
         Row: {
+          category: string
           code: string
           created_at: string
           game: string
@@ -18,6 +19,7 @@ export type Database = {
           name: string
         }
         Insert: {
+          category: string
           code: string
           created_at?: string
           game?: string
@@ -25,6 +27,7 @@ export type Database = {
           name: string
         }
         Update: {
+          category?: string
           code?: string
           created_at?: string
           game?: string
@@ -43,6 +46,7 @@ export type Database = {
       }
       games: {
         Row: {
+          categories: Json | null
           country: string | null
           created_at: string
           id: string
@@ -50,6 +54,7 @@ export type Database = {
           system: string
         }
         Insert: {
+          categories?: Json | null
           country?: string | null
           created_at?: string
           id?: string
@@ -57,6 +62,7 @@ export type Database = {
           system: string
         }
         Update: {
+          categories?: Json | null
           country?: string | null
           created_at?: string
           id?: string
@@ -92,6 +98,15 @@ export type Database = {
       [_ in never]: never
     }
   }
+}
+
+export type Game = {
+  categories: string[] | null
+  country: string | null
+  created_at: string
+  id: string
+  name: string
+  system: string
 }
 
 type PublicSchema = Database[Extract<keyof Database, "public">]
